@@ -1,0 +1,13 @@
+<h4>{{ phone.name }} Details</h4>
+<section class="card p-3 mb-5" *ngIf="phone">
+    <figure>
+        <img [src]="phone.imgUrl" class="img-fluid p-5" alt="phone.name">
+    </figure>
+    <h3>{{ phone.name }}</h3>
+    <h4>{{ phone.price }}</h4>
+    <p>{{ phone.description }}</p>
+
+    <section class="pt-2">
+        <app-backbutton></app-backbutton>
+    </section>
+</section>

@@ -1,0 +1,37 @@
+<section>
+    <section class="container-fluid">
+        <figure><img src="../../assets/iso-iphone-xs.jpg" alt="iphone xs" class="img-fluid mx-auto d-block"></figure>
+        <h1>Phone Models</h1>
+    </section>
+    <section class="sample-images bg-light">
+        <section class="row mt-1 mb-3">
+            <article class="col-4 phone" *ngFor="let phone of phones">
+                    <figure class="img-fluid mx-auto d-block" *ngIf="phone.imgUrl">
+                        <img [src]="phone.imgUrl" alt="phone.name">
+                    </figure>
+                    <h2 class="pl-2"><a [routerLink]="['/phone', phone.id]">{{ phone.name }}</a></h2>
+                    <p class="pl-2 price">{{ phone.price }}€</p>
+                    <p class="pl-2">Description: {{ phone.shortDesription }}  <a [routerLink]="['/phone', phone.id]">more</a></p>
+                    <section class="buttonsection">
+                        <button class="btn btn-info ml-4" (click)="addToCart(phone)">
+                            Buy Now!
+                        </button>
+                        <button class="btn btn-primary btn-sm mr-2" (click)="share()">
+                            <fa-icon [icon]="faFacebookF"></fa-icon>
+                        </button>
+                        <button class="btn btn-primary btn-sm mr-2" (click)="share()">
+                           <fa-icon [icon]="faTwitterSquare"></fa-icon>
+                        </button>
+                        <button class="btn btn-primary btn-sm mr-2" (click)="share()">
+                           <fa-icon [icon]="faInstagram"></fa-icon>
+                        </button>
+                    </section>
+
+                    <section>
+                        <app-product-alerts [phone]="phone"(notify)="onNotify()">
+                        </app-product-alerts>
+                    </section>
+            </article>
+        </section>
+    </section>
+</section>

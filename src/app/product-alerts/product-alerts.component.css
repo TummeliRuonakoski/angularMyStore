@@ -1,0 +1,10 @@
+button{
+    background-color: #A52A2A;
+    color: white;
+    border-color: #A52A2A;
+    border-radius: 3px;
+}
+
+button >* {
+    padding: 3px;
+}

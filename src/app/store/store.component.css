@@ -1,0 +1,34 @@
+
+  .phone{
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+  h2,a{
+    color: #A52A2A;
+  }
+
+  h1{
+    color: #A52A2A;
+    font-size: 50px;
+  }
+  
+  p:hover{
+  cursor: pointer;
+  }
+
+  
+  .price{
+    font-weight:700;
+    margin-top: -20px;
+  }
+
+
+  .buttonsection >*{
+    margin: 2px;
+    background-color: steelblue;
+    color: white;
+    border-radius: 3px;
+    border-color: steelblue;
+
+  }
